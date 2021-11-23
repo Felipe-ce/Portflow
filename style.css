@@ -1,0 +1,145 @@
+/* Importando font do google font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
+
+/* Cores e fonte */
+:root{
+  /*  font 
+      variação de font em px: 78,
+                              50,
+                              35,
+                              22,
+                              18,
+                              ;
+  */
+  --font: 'Montserrat', sans-serif;
+
+  /* Cores */
+  --cor-base: #fff;
+  --cor-suporte-claro: #CCCCCC;
+  --cor-suporte-escuro: #707070;
+  --cor-destaque: #7FDBD4
+}
+
+/* Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+/**
+ * Remove anchor text-decoration
+ */ 
+a {
+	text-decoration: none;
+}
+
+/**
+ * Remove list-style
+ */ 
+ol, ul {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6, p, a, ul {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+
+/* Gerais */  
+body{
+  font-family: var(--font);
+}
+img{
+  display: block;
+  max-width: 100%;
+}
+
+/* Header */
+.header{
+  padding: .25rem;
+  background: var(--cor-base);
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+.logo{
+  max-width: 120px;
+}
+/* Estilizando, quando for fazer o menu mobile volto com display block */
+nav{
+  display: none;
+}
+
+/* introdução */
+.intro{
+  padding: 2rem;
+  margin-top: 2.805rem;
+  background: url(img/intro-bg-mobile.jpg) no-repeat center;
+  background-size: cover;
+  height: calc(100vh - 2.805rem) ;
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  justify-content: flex-end;
+  color: var(--cor-base);
+}
+.intro h2{
+  font-size: 3.125rem;
+  font-weight: 800;
+}
+.intro a{
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  color: var(--cor-base);
+}
+
+
+/* produtos */
+.produtos{
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+  max-width: 1340px;
+  margin: 0 auto;
+  place-content: center;
+  place-items: center;
+}
+.produtos img{
+  place-self: center;
+}
+
+
+/* Footer */
+.footer{
+  padding: 1rem;
+  word-break: break-word;
+}
+.redes-sociais{
+  padding: .5rem;
+  background: var(--cor-destaque);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+.footer h3{
+  font-weight: bold;
+  font-size: .875rem;
+  margin-bottom: .5rem;
+}
+.footer p{
+  font-size: .75rem;
+  color: var(--cor-suporte-escuro);
+}
