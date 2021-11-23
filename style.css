@@ -63,6 +63,16 @@ img{
   display: block;
   max-width: 100%;
 }
+.btn{
+  align-self: center;
+  border: none;
+  padding: .5rem;
+  color: var(--cor-suporte-claro);
+  background: var(--cor-suporte-escuro);
+  font-size: 1rem;
+  font-weight: 600;
+  max-width: 120px;
+}
 
 /* Header */
 .header{
@@ -81,18 +91,24 @@ nav{
   display: none;
 }
 
+
 /* introdução */
 .intro{
+  max-width: 100%;
   padding: 2rem;
-  margin-top: 2.805rem;
-  background: url(img/intro-bg-mobile.jpg) no-repeat center;
+  margin-top: 40.48px;
+  background: url('img/intro-bg-mobile.jpg') no-repeat center;
   background-size: cover;
-  height: calc(100vh - 2.805rem) ;
+  height: calc(100vh - 40.48px) ;
+
+  color: var(--cor-base);
+}
+.intro-content{
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.125rem;
   justify-content: flex-end;
-  color: var(--cor-base);
 }
 .intro h2{
   font-size: 3.125rem;
@@ -119,12 +135,18 @@ nav{
 .produtos img{
   place-self: center;
 }
-
-
 /* Footer */
 .footer{
+  max-width: 100%;
   padding: 1rem;
+}
+.footer-content{
+  max-width: 1340px;
+  margin: 0 auto;
   word-break: break-word;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
 }
 .redes-sociais{
   padding: .5rem;
@@ -132,7 +154,7 @@ nav{
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  margin-bottom: 1rem;
+  grid-column: 1 / -1;
 }
 .footer h3{
   font-weight: bold;
@@ -143,3 +165,84 @@ nav{
   font-size: .75rem;
   color: var(--cor-suporte-escuro);
 }
+
+/* Versão desktop */
+@media (min-width: 768.9px){
+  /* Header */
+  .nav{
+    display: block;
+  }
+  .header{
+    padding: 1rem 0;
+  }
+  .header > div{
+    max-width: 1340px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .header .menu{
+    display: flex;
+    gap: 1rem;
+    padding: .5rem;
+  }
+  .header .menu a {
+    padding: .5rem;
+    color: var(--cor-suporte-escuro);
+    transition: color 200ms ease-out;
+    font-weight: 800;
+  }
+  .header .menu a:hover{
+    color: #000000;
+  }
+
+  /* Introdução */
+  .intro{
+    height: 780px;
+    background: url('img/intro-bg.jpg') no-repeat center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .intro-content{
+    max-width: 1340px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .intro h2{
+    font-size: 4.875rem;
+  }
+  .intro a{
+    font-size: 2.188rem;
+  }
+
+  /* rodutos */
+  .produtos{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Footer */
+  .footer{
+    background: #efefef;
+  }
+  .footer-content{
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .footer-content > div{
+    margin-left: 3rem;
+  }
+  .redes-sociais{
+    background: none;
+    grid-column: auto;
+    margin-right: 2rem;
+  }
+}
+
+
+/* Versão tablete */
+@media only screen and (min-width: 769px) and (max-width: 959px){
+  .produtos{
+    grid-template-columns: repeat(3, 1fr);
+  }
+} 
