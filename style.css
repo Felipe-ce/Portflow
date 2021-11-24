@@ -187,14 +187,18 @@ nav{
     gap: 1rem;
     padding: .5rem;
   }
+  .header .menu li{
+    width: 80px;
+  }
   .header .menu a {
     padding: .5rem;
     color: var(--cor-suporte-escuro);
     transition: color 200ms ease-out;
-    font-weight: 800;
+    /* font-weight: 800; */
   }
   .header .menu a:hover{
     color: #000000;
+    font-weight: 800;
   }
 
   /* Introdução */
